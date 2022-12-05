@@ -1,0 +1,64 @@
+class SingleItem extends React.Component {
+  render() {
+    let data = this.props.data;
+
+    return (
+        <li>
+            <div> {data.name} </div>
+        </li>
+    );
+  }
+}
+
+class ItemList extends React.Component {
+   render() {
+     let itemArr = this.props.items;
+
+     let listItems = itemArr.map((itemObj) => {
+        return <SingleItem key={itemObj.id} data={itemObj}/>;
+});
+
+    return (
+        <ul onClick={props.handleEvent}>
+            {listItems}
+        </ul>
+    );
+  }
+}
+
+class App extends React.Component {
+constructor(props) {
+    super(props);
+
+    this.state = {
+        boxOne: {listItems},
+        boxTwo:''
+    };
+
+    this.handleEvent = this.handleEvent.bind(this);
+}
+
+handleEvent() {
+    this.setState({
+        boxOne: this.state.boxTwo,
+        boxTwo: this.state.boxOne
+    });
+}
+render() {
+    return (
+        <div>
+            <ItemList items={this.state.boxOne} />
+            <ItemList items={this.state.boxTwo} />
+        </div>
+    );
+  }
+};
+
+var items = [
+  {name: "Item 1", id: 1},
+  {name: "Item 2", id: 2},
+  {name: "Item 3", id: 3},
+  {name: "Item 4", id: 4},
+]
+
+ReactDOM.render(<App />, document.getElementById('root'));

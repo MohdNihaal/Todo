@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: "baloopaaji";
+  src: url("./assets/fonts/baloopaaji2-regular-webfont.woff2") format("woff2"),
+      url("./assets/fonts/baloopaaji2-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1{
+  margin-left: 40%;
+  font-family: "baloopaaji";
+  font-size: 38px;
+}
+ul{
+  margin-left: 30%;
+}
+#plus{
+  margin-right: 20px;
+}
+#delete{
+  margin-left: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+#revert{
+  margin-left: 20px;
+}
+#tick{
+  margin-right: 20px;
+}
+h3{
+  font-family: "baloopaaji";
+  font-size: 28px;
+}
+input{
+  font-family: "baloopaaji";
+  padding: 6px 25px;
+  font-size: 16px;
+}
+button{
+  font-family: "baloopaaji";
+  padding: 6px 10px;
+  font-size: 16px;
+}
+li{
+  font-family: "baloopaaji";
+  margin-top: 12spx;
+  font-size: 20px;
+  list-style: none;
+  width: 50%;
+}
